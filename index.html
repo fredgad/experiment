@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ring Test</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div id="survey-block">
+      <div class="image">
+        <img src="./img/Screen_2.jpg" alt="img" loading="lazy">
+      </div>
+      <div id="without-help">
+        <p data-r="Оцените сколько колец в куче" data-e="Estimate how many rings are in the heap" class="Lang"></p>
+        <input type="number" id="guess-without-help">
+        <button data-r="Оценить" data-e="Estimate" class="Lang"></button>
+      </div>
+
+      
+      <div id="with-help">
+        <p data-r="Повторно оцените количество колец на первой картинке" data-e="Please re-evaluate the number of rings in the first picture." class="Lang"></p>
+        <input type="number" id="guess-with-help">
+        <button data-r="Оценить" data-e="Estimate" class="Lang">Оценить</button>
+      </div>
+    </div>
+
+    <div id="prompt-block">
+      <div class="image">
+        <img src="./img/Screen_1.jpg" alt="img" loading="lazy">
+      </div>
+      <p data-r="Небольшая подсказка - в этой маленькой куче 24 кольца" data-e="Small hint - there are 24 rings in this small heap" class="Lang"></p>
+      <button data-r="Готово" data-e="Done" class="Lang" id="promt-done"></button>
+    </div>
+
+    <div id="results-block">
+      <h1 data-r="Результаты" data-e="Results" class="Lang"></h1>
+      <div class="real result-block">
+        <p data-r="На первой картике реально находится" data-e="Actually, on the first picture, there is" class="Lang"></p>
+        <span data-r="81 кольцо" data-e="81 rings" class="Lang"></span>
+      </div>
+
+      <div class="your-answer-without-help result-block">
+        <p data-r="Ваш ответ без подсказки" data-e="Your answer without a hint" class="Lang"></p>
+        <span id="your-answer-without-help"></span>
+      </div>
+
+      <div class="your-answer-with-help result-block">
+        <p data-r="Ваш ответ с подсказкой" data-e="Your answer with a hint" class="Lang"></p>
+        <span id="your-answer-with-help"></span>
+      </div>
+
+      <div class="people-voted result-block">
+        <p data-r="Всего человек проголосовало" data-e="Total number of people who voted" class="Lang"></p>
+        <span id="people-voted"></span>
+      </div>
+
+      <div class="people-voted result-block">
+        <p data-r="Не довели эксперимент до конца" data-e="Not completed to the end" class="Lang"></p>
+        <span id="no-complited"></span>
+      </div>
+
+      <div class="collective-answer-without-help result-block">
+        <p data-r="Среднее значение (коллективный ответ) без подсказки" data-e="The average value (collective answer) without a hint" class="Lang"></p>
+        <span id="collective-answer-without-help"></span>
+      </div>
+
+      <div class="collective-answer-with-help result-block">
+        <p data-r="Среднее значение (коллективный ответ) с подсказкой" data-e="The average value (collective answer) with a hint" class="Lang"></p>
+        <span id="collective-answer-with-help"></span>
+      </div>
+
+      <div class="collective-answer-without-help-more-accurate result-block">
+        <p data-r="Среднее значение без подсказки точнее чем индивидуальный ответ у" data-e="The average value without a hint is more accurate than the individual answer of" class="Lang"></p>
+        <span id="collective-answer-without-help-more-accurate"></span>
+      </div>
+
+      <div class="collective-answer-with-help-more-accurate result-block">
+        <p data-r="Среднее значение с подсказкой точнее чем индивидуальный ответ у" data-e="The average value with a hint is more accurate than the individual answer of" class="Lang" class="red"></p>
+        <span id="collective-answer-with-help-more-accurate"></span>
+      </div>
+
+      <h3 data-r="Бонус" data-e="Bonus" class="Lang"></h3>
+      <div class="your-without-help-more-accurate result-block">
+        <p data-r="Ваш ответ без подсказки точнее чем у" class="Lang" data-e="Your answer without a hint is more accurate than"></p>
+        <span id="your-without-help-more-accurate"></span>
+      </div>
+
+      <div class="your-with-help-more-accurate result-block">
+        <p data-r="Ваш ответ с подсказкой точнее чем у" data-e="Your answer with a hint is more accurate than" class="Lang"></p>
+        <span id="your-with-help-more-accurate"></span>
+      </div>
+
+      <br/>
+      <h5 data-r="Большое спасибо за потраченное время. Буду благодарен, если попросишь кого-либо ещё пройти тест" data-e="Thank you very much for your time, I would be grateful if you ask someone else to take the test" class="Lang"></h5>
+    </div>
+  </div>
+
+  <div id="swapWrapper">
+    <div data-r="ENG" data-e="РУС" class="Lang" id="swap"></div>
+  </div>
+
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
